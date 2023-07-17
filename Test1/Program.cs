@@ -7,9 +7,9 @@ namespace Test1
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            
+            Equation e = new QuadEquation(0, 20, 0);  
         }
     }
 }
