@@ -16,5 +16,5 @@ namespace Test2
             Integrator i1 = new RectangleIntergrator(e);
             i1.Integrate(0, 5);
         }
-    }
+    }-+
 }

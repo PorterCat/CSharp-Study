@@ -26,7 +26,7 @@ namespace Test2
             {
                 sum = sum + base._equation.GetValue(x1 + i * h) * h;
             }
-            Console.WriteLine($"The result: {sum}. Counted by Triangle method");
+            Console.WriteLine($"The result: {sum}. Counted by Rectangle method");
             return sum;
         }
     }
