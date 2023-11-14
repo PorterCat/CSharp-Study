@@ -7,30 +7,29 @@ using System.Threading.Tasks;
 
 namespace Test1
 {
-    public class Stack<T> where T : IComparable<T>
+    public class Stack<T> : LinkedList<T> where T : IComparable<T>
     {
-        private Node<T>? _head;
 
-        public void Push(T value)
+        public override void Add(T value)
         {
-            Node<T> newNode = new Node<T>(_head, value);
-            newNode.Next = _head;
-            _head = newNode;
+            Node<T> newNode = new Node<T>(_root, value);
+            newNode.Next = _root;
+            _root = newNode;
         }
 
         public void Pop() 
         {
-            _head = _head != null ? _head.Next : null;
+            _root = _root != null ? _root.Next : null;
         }
 
         public T Peek()
         {
-            return _head.Value;
+            return _root.Value;
         }
 
-        public void PrintStack()
+        public override void Print()
         {
-            Node<T> temp = _head;
+            Node<T> temp = _root;
             while (temp != null)
             {
                 Console.Write(temp.Value + " ");
@@ -39,7 +38,7 @@ namespace Test1
             Console.WriteLine();
         }
 
-        public void Free() => _head = null;
+        public void Free() => _root = null;
 
     }
 }

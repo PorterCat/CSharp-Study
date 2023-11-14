@@ -7,34 +7,33 @@ using System.Threading.Tasks;
 
 namespace Test1
 {
-    public class Queue<T> where T : IComparable<T>
+    public class Queue<T> : LinkedList<T> where T : IComparable<T>
     {
-        private Node<T>? _head;
         private Node<T>? _tail;
 
-        public void Enqueue(T value)
+        public override void Add(T value)
         {
             Node<T>? newNode = new Node<T>(value);
 
-            if(_head != null)
+            if(_root != null)
             {
                 _tail.Next = newNode;
             }
             else
             {
-                _head = newNode; 
+                _root = newNode; 
             }
             _tail = newNode;
         }
 
         public void Dequeue()
         {
-            _head = _head != null ? _head.Next : null;
+            _root = _root != null ? _root.Next : null;
         }
 
-        public void PrintQueue()
+        public override void Print()
         {
-            Node<T> temp = _head;
+            Node<T> temp = _root;
             while (temp != null)
             {
                 Console.Write(temp.Value + " ");
@@ -45,7 +44,7 @@ namespace Test1
 
         public void Free() 
         {
-            _head = null;
+            _root = null;
             _tail = null;
         }
     }

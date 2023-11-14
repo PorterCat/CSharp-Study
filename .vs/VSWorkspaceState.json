@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Data-structs",
     "\\Test1"
   ],
-  "SelectedNode": "\\Test1\\Test1.csproj",
+  "SelectedNode": "\\Data-structs\\LinkedList.cs",
   "PreviewInSolutionExplorer": false
 }

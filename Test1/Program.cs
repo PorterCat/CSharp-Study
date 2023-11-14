@@ -9,7 +9,11 @@ namespace Test1
     {
         static void Main()
         {
-            Equation e = new QuadEquation(0, 20, 0);  
+            Queue<int> q = new Queue<int>();
+            q.Enqueue(1);
+            q.Enqueue(2);
+            q.Enqueue(3);
+            
         }
     }
 }

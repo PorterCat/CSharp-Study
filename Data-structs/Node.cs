@@ -7,12 +7,6 @@
 
         protected Node() { }
 
-        public Node(Node<T> next, T value)
-        {
-            Value = value;
-            Next = next;
-        }
-
         public Node(T value)
         {
             Value = value;
